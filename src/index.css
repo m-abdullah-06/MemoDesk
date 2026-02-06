@@ -4,10 +4,98 @@ body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 .note {
   background-color: #fef68a;
-  margin-bottom: 10px;
   border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+}
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.note.new {
+  background-color: #67d7cc;
+}
+textarea {
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+.delete-icon {
+  color: red;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+.delete-icon:hover {
+  color: #ededed;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input {
+  background-color: rgb(233, 233, 233);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+}
+.search input:focus {
+  outline: none;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.dark-mode {
+  background-color: black;
+  min-height: 100%;
+}
+.dark-mode h1 {
+  color: white;
 }
