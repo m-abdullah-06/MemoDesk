@@ -64,4 +64,4 @@ This project is licensed under the MIT License.
 
 Your Name - abdullah.muhammad.xyz@gmail.com
 
-Project Link: [https://github.com/yourusername/memodesk](https://memodeskbyabd.netlify.app)
+Project Link: [MemoDesk](https://memodeskbyabd.netlify.app)
