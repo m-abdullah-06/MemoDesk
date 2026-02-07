@@ -44,6 +44,15 @@ const App = () => {
 
   const [searchText, setSearchText] = useState("");
   const [darkMode, setDarkMode] = useState(false);
+  const noteColors = [
+    "note-yellow",
+    "note-pink",
+    "note-blue",
+    "note-green",
+    "note-purple",
+  ];
+
+  const randomColor = noteColors[Math.floor(Math.random() * noteColors.length)];
 
   // Save notes to local storage whenever notes change
   useEffect(() => {
@@ -65,6 +74,7 @@ const App = () => {
       id: nanoid(),
       text: text,
       date: date.toLocaleDateString(),
+      color: randomColor,
     };
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
@@ -77,7 +87,11 @@ const App = () => {
 
   return (
     <div className="container">
-      <Header handleToggleDarkMode={setDarkMode} />
+      <Header
+        handleToggleDarkMode={setDarkMode}
+        darkMode={darkMode}
+        notes={notes}
+      />
       <Search handleSearchnote={setSearchText} />
       <NotesList
         notes={notes.filter((note) =>

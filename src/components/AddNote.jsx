@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiCheck } from "react-icons/fi";
 
 const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState("");
@@ -24,13 +25,13 @@ const AddNote = ({ handleAddNote }) => {
         rows="8"
         cols="10"
         value={noteText}
-        placeholder="Type to add a note..."
+        placeholder="No notes yet. Type here to start writing ✍️"
         onChange={handleChange}
       ></textarea>
       <div className="note-footer ">
         <small>{characterLimit - noteText.length} words left</small>
         <button className="save" onClick={handleSaveClick}>
-          Save
+          <FiCheck />
         </button>
       </div>
     </div>

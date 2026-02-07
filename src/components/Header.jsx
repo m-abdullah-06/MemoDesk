@@ -1,16 +1,19 @@
 import React from "react";
 
-const Header = ({ handleToggleDarkMode }) => {
+const Header = ({ handleToggleDarkMode, darkMode, notes }) => {
   return (
     <div className="header">
-      <h1>MemoDesk</h1>
+      <div className="logo">
+        <h1 className="main-heading">MemoDesk</h1>
+        <p className="sub-heading">Your Thoughts. Organized.</p>
+        <p className="note-count">{notes.length} notes</p>
+      </div>
+
       <button
-        className="save"
-        onClick={() =>
-          handleToggleDarkMode((previousDarkMode) => !previousDarkMode)
-        }
+        className="theme-toggle"
+        onClick={() => handleToggleDarkMode((prev) => !prev)}
       >
-        DarkMode
+        {darkMode ? "☀️" : "🌙"}
       </button>
     </div>
   );

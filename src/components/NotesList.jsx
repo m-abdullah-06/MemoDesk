@@ -2,7 +2,7 @@ import React from "react";
 import Note from "./Note";
 import AddNote from "./AddNote";
 
-const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
+const NotesList = ({ notes, handleAddNote, handleDeleteNote, color }) => {
   return (
     <div className="notes-list">
       {notes.map((note) => (
@@ -12,6 +12,7 @@ const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
           date={note.date}
           id={note.id}
           handleDeleteNote={handleDeleteNote}
+          color={note.color}
         />
       ))}
       <AddNote handleAddNote={handleAddNote} />
