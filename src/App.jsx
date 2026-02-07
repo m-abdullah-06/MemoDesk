@@ -12,33 +12,7 @@ const App = () => {
     if (savedNotes) {
       return JSON.parse(savedNotes);
     } else {
-      return [
-        {
-          id: nanoid(),
-          text: "This is some random",
-          date: "13-3-2026",
-        },
-        {
-          id: nanoid(),
-          text: "This is some random 2",
-          date: "11-3-2026",
-        },
-        {
-          id: nanoid(),
-          text: "LOL",
-          date: "12-3-2026",
-        },
-        {
-          id: nanoid(),
-          text: "This is some random 4",
-          date: "14-3-2026",
-        },
-        {
-          id: nanoid(),
-          text: "This is some random 4",
-          date: "14-3-2026",
-        },
-      ];
+      return [];
     }
   });
 
